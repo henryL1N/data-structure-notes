@@ -12,7 +12,7 @@
             4. 数据结构 data structure
             5. 数据对象 data object
             6. 数据类型 data type
-            7. 抽象数据类型 Abstract Data Type, ADT
+            7. 抽象数据类型 Abstract Data Type, ADT
         3. 数据结构的分类
             1. 分解和抽象
             2. 逻辑结构与存储结构
