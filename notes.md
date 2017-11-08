@@ -9,9 +9,9 @@
             1. 数据 data
             2. 数据元素 data element
             3. 数据项 data item
-            4. 数据结构 data structure
+            4. 数据结构 data structure
             5. 数据对象 data object
-            6. 数据类型 data type
+            6. 数据类型 data type
             7. 抽象数据类型 Abstract Data Type, ADT
         3. 数据结构的分类
             1. 分解和抽象
