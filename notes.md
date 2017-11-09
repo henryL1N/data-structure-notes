@@ -95,8 +95,8 @@
                 * 每个元素具有“位置”和“值”
                 * 元素的值与位置的关系可有可无
         2. 线性表的主要操作
-            * 构造`void initList(List& L)`
-            * 清空`void clearList(List& L)`
+            * 构造`void initList (List& L)`
+            * 清空`void clearList (List& L)`
             * 判空`int isEmpty (List& L)`
             * 判满`int isFull (List& L)`
             * 长度`int Length (List& L)`
@@ -105,7 +105,7 @@
             * 插入`int Insert (List& L, int i, DataType x)`
             * 删除`int Remove (List& L, int i, DataType& x)`
             * 遍历`void Traverse (List& L)`
-            * 复制`void Copy(List& Ll, List& L2)`
+            * 复制`void Copy (List& Ll, List& L2)`
             * 排序`void Sort (List& L)`
     2. 顺序表
         1. 顺序表的定义和特点
@@ -161,11 +161,27 @@
 3. 栈和队列
     1. 栈
         1. 栈的概念
+            * 主要操作
+                * 初始化`void InitStack (Stack& S)`
+                * 压栈`void Push (Stack& S, SElemType x)`
+                * 出栈`int Pop (Stack& S, SElemType & x)`
+                * 栈顶`int GetTop (Stack& S, SElemType & x)`
+                * 判空`int StackEmpty (Stack& S)`
+                * 判满`int StackFull (Stack& S)`
+                * 栈长`int Stack&ize (Stack& S)`
         2. 顺序栈
         3. 链式栈
         4. 栈的混洗
     2. 队列
         1. 队列的概念
+            * 主要操作
+                * 初始化`InitQueue (Queues Q)`
+                * 入队`void EnQueue (Queues Q, QElemType x)`
+                * 出队`int DeQueue (Queues Q,QElemType& x)`
+                * 队头`int GetFront (Queues Q,QElemType& x)`
+                * 判空`int QueueEmpty (Queues Q)`
+                * 判满`int QueueFull (Queues Q)`
+                * 队长`int QueueSize (Queues Q)`
         2. 循环队列
         3. 链式队列
     3. 栈的应用
@@ -222,36 +238,68 @@
             * 扩展线性链表表示
             * 层次表示
         4. 三元多项式的表示
-第章树与二叉树
-树的基本概念
-树的定义和术语
-树的基本操作
-二叉树
-二叉树的概念
-二叉树的性质
-二叉树的主要操作
-二叉树的存储表示二
-二叉树的顺序存储表示
-二叉树的链表存储表示
-二叉树的遍历
-二叉树遍历的递归算法
-递归遍历算法的应用举例……
-二叉树遍历的非递归算法
-非递归遍历算法的应用举例…'
-二叉树的计数
-线索二叉树
-线索二叉树的概念
-线索二叉树的种类
-中序线索二叉树的建立和遍历
-前序与后序线索二叉树
-树与森林
-树的存储表示
-S森林与二叉树的转换+…"
-树与森林的深度优先遍历
-树与森林的广度优先遍历
-树遍历算法的应用举例…
-小结
-习题
+5. 树与二叉树
+    1. 树的基本概念
+        1. 树的定义和术语
+            * 定义
+                * 自由树
+                * 有根树
+            * 基本术语
+                * 结点 node
+                * 结点的度 degree
+                * 叶结点 leaf
+                * 分支结点 branch
+                * 子女结点 child
+                * 父结点 parent
+                * 兄弟结点 sibling
+                * 祖先结点 ancestor
+                * 子孙结点 descendant
+                * 结点间的路径 path
+                * 结点的深度 depth
+                * 结点的高度 height
+                * 树的深度 depth
+                * 树的高度 height
+                * 树的宽度 width
+                * 树的度 degree
+                * 有序树 ordered tree
+                * 无序树
+                * 森林 forest
+        2. 树的基本操作
+            * 创建`void InitTree (Tree& T)`
+            * 删除`void ClearTree (TreeNode * & T)`
+            * 首子`position FirstChild (Tree& T, position p)`
+            * 下兄`position NextSibling (Tree& T, position p)`
+            * 取父`position Parent (Tree& T, position p)`
+            * 插子`int InsertChild (Tree& T, position p, TElemType x)`
+            * 删子`int DeleteChild (Tree& T, position p, int i)`
+            * 删树`void DeleteSubTree (Tree& T, position t)`
+            * 遍历`void Traversal (Tree& T, position p)`
+    2. 二叉树
+        1. 二叉树的概念
+        2. 二叉树的性质
+        3. 二叉树的主要操作
+    二叉树的存储表示二
+    二叉树的顺序存储表示
+    二叉树的链表存储表示
+    二叉树的遍历
+    二叉树遍历的递归算法
+    递归遍历算法的应用举例……
+    二叉树遍历的非递归算法
+    非递归遍历算法的应用举例…'
+    二叉树的计数
+    线索二叉树
+    线索二叉树的概念
+    线索二叉树的种类
+    中序线索二叉树的建立和遍历
+    前序与后序线索二叉树
+    树与森林
+    树的存储表示
+    S森林与二叉树的转换+…"
+    树与森林的深度优先遍历
+    树与森林的广度优先遍历
+    树遍历算法的应用举例…
+    小结
+    习题
 第章树与二叉树的应用
 二叉查找树……
 二叉査找树的查找……二叉查找树的插入……
