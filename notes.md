@@ -162,7 +162,7 @@
     1. 栈
         1. 栈的概念
             * 主要操作
-                * 初始化`void InitStack (Stack& S)`
+                * 创建`void InitStack (Stack& S)`
                 * 压栈`void Push (Stack& S, SElemType x)`
                 * 出栈`int Pop (Stack& S, SElemType & x)`
                 * 栈顶`int GetTop (Stack& S, SElemType & x)`
@@ -175,7 +175,7 @@
     2. 队列
         1. 队列的概念
             * 主要操作
-                * 初始化`InitQueue (Queues Q)`
+                * 创建`InitQueue (Queues Q)`
                 * 入队`void EnQueue (Queues Q, QElemType x)`
                 * 出队`int DeQueue (Queues Q,QElemType& x)`
                 * 队头`int GetFront (Queues Q,QElemType& x)`
@@ -267,40 +267,74 @@
         2. 树的基本操作
             * 创建`void InitTree (Tree& T)`
             * 删除`void ClearTree (TreeNode * & T)`
-            * 首子`position FirstChild (Tree& T, position p)`
+            * 首孩`position FirstChild (Tree& T, position p)`
             * 下兄`position NextSibling (Tree& T, position p)`
             * 取父`position Parent (Tree& T, position p)`
-            * 插子`int InsertChild (Tree& T, position p, TElemType x)`
-            * 删子`int DeleteChild (Tree& T, position p, int i)`
+            * 插孩`int InsertChild (Tree& T, position p, TElemType x)`
+            * 删孩`int DeleteChild (Tree& T, position p, int i)`
             * 删树`void DeleteSubTree (Tree& T, position t)`
             * 遍历`void Traversal (Tree& T, position p)`
     2. 二叉树
         1. 二叉树的概念
+            * 特点
+                * 每结点最多两个子女，分左右
+                * 定义递归，子树必是二叉树
+                * 5种形态
+                    * 空二叉树
+                    * 只有根结点
+                    * 右子树为空
+                    * 左子树为空
+                    * 左右子树不为空
+                * 树的术语适用于二叉树，但二叉树不是树
+                    * 分左右
         2. 二叉树的性质
+            * 第i层结点<=2^(i-1)
+            * 深度为k的二叉树，k<=结点数<=2^k-1
+            * 0度叶结点数=2度结点数+1
+            * 满二叉树：除底层结点0度，其余结点2度
+            * 完全二叉树：底层以上满，底层左起满
+            * 丰满二叉树：底层以上满，底层无要求
+            * n结点完全二叉树或丰满二叉树深度=ln(n+1)/ln2向上取整
+            * 将n结点完全二叉树从按行从上至下，每行从左至右转换为一维数组，对结点i(1<=i<=n)
+                * 若i=1，结点i为根；若i>1，父结点为结点i/2向下取整
+                * 若2i<=n，则左子女为结点2i
+                * 若2i+1<=n，则右子女为结点2i+1
+                * 结点i所在层次为ln(i)/ln(2)向下取整+1
         3. 二叉树的主要操作
-    二叉树的存储表示二
-    二叉树的顺序存储表示
-    二叉树的链表存储表示
-    二叉树的遍历
-    二叉树遍历的递归算法
-    递归遍历算法的应用举例……
-    二叉树遍历的非递归算法
-    非递归遍历算法的应用举例…'
-    二叉树的计数
-    线索二叉树
-    线索二叉树的概念
-    线索二叉树的种类
-    中序线索二叉树的建立和遍历
-    前序与后序线索二叉树
-    树与森林
-    树的存储表示
-    S森林与二叉树的转换+…"
-    树与森林的深度优先遍历
-    树与森林的广度优先遍历
-    树遍历算法的应用举例…
-    小结
-    习题
-第章树与二叉树的应用
+            * 创建`void InitBTree (BiTNode*& T)`
+            * 删除`void ClearBTree (BiTNode*& T)`
+            * 左孩`BiTNode* LeftChild (BiTNode* p)`
+            * 右孩`BiTNode* RightChild (BiTNode* p)`
+            * 取父`BiTNode* Parent (BiTNode* p>;
+            * 取值`int GetData (BiTNode* p, TElemType& x)`
+            * 建树`void CreateBinTree (BiTNode*& T)`
+            * 印树`void PrintBinTree (BiTNode*& T)`
+            * 树高`int Height (BiTNode*& T)`
+            * 前序遍历`void PreOrder (BiTNode* T)`根>左>右
+            * 中序遍历`void InOrder (BiTNode* T)`左>根>右
+            * 后序遍历`void PostOrder (BiTNode* T)`左>右>根
+            * 层序遍历`void LevelOrder (BiTNode* T)`顶>底
+    3. 二叉树的存储表示
+        1. 二叉树的顺序存储表示
+        2. 二叉树的链表存储表示
+    4. 二叉树的遍历
+        1. 二叉树遍历的递归算法
+        2. 递归遍历算法的应用举例
+        3. 二叉树遍历的非递归算法
+        4. 非递归遍历算法的应用举例
+        5. 二叉树的计数
+    5. 线索二叉树
+        1. 线索二叉树的概念
+        2. 线索二叉树的种类
+        3. 中序线索二叉树的建立和遍历
+        4. 前序与后序线索二叉树
+    6. 树与森林
+        1. 树的存储表示
+        2. S森林与二叉树的转换
+        3. 树与森林的深度优先遍历
+        4. 树与森林的广度优先遍历
+        5. 树遍历算法的应用举例
+树与二叉树的应用
 二叉查找树……
 二叉査找树的查找……二叉查找树的插入……
 二叉査找树的删除……
