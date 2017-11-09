@@ -166,8 +166,8 @@
                 * 压栈`void Push (Stack& S, SElemType x)`
                 * 出栈`int Pop (Stack& S, SElemType & x)`
                 * 栈顶`int GetTop (Stack& S, SElemType & x)`
-                * 判空`int StackEmpty (Stack& S)`
-                * 判满`int StackFull (Stack& S)`
+                * 判空`int StackEmpty (Stack& S)`
+                * 判满`int StackFull (Stack& S)`
                 * 栈长`int Stack&ize (Stack& S)`
         2. 顺序栈
         3. 链式栈
@@ -259,7 +259,7 @@
                 * 结点的高度 height
                 * 树的深度 depth
                 * 树的高度 height
-                * 树的宽度 width
+                * 树的宽度 width
                 * 树的度 degree
                 * 有序树 ordered tree
                 * 无序树
