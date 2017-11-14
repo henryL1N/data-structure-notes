@@ -490,7 +490,42 @@
 7. 图
     1. 图的基本概念
         1. 与图有关的若干概念
+            * 术语
+                * 完全图：边=n(n-1)/2
+                * 权重：边的数值
+                * 网络：带权图
+                * 邻接顶点
+                    * 无向图：边两端互为邻接点
+                    * 有向图：<u, v>u邻接到v，v邻接自u
+                * 子图
+                * 顶点的度：顶点关联的边数
+                * 路径：顶点序列或边序列
+                * 路径长度：
+                    * 不带权图：边数
+                    * 带权图：各边权重之和
+                * 简单路径与回路
+                    * 简单路径：路径顶点不重复
+                    * 回路（环）：第一点与最后一点重合
+                * 连通图与连通分量
+                    * 连通：两点间有路径
+                    * 连通图：任两点连通
+                    * 连通分量：非连通图的极大连通子图
+                * 生成树
         2. 图的基本操作
+            * 创建`void CreateGraph (Graph& G, int n, int m)`
+            * 打印`void PrintGraph (Graph& G)`
+            * 初始化`void InitGraph (Graph& G)`
+            * 查顶点`int GetVertexPos (Graph& G, VType x)`
+            * 顶点数`int NumberOfVertices (Graph& G)`
+            * 边数`int NumberOfEdges (Graph& G)`
+            * 取值`VType GetValue (Graph& G, int i)`
+            * 取权重`WType GetWeight (Graph& G, int v1, int v2)`
+            * 首邻接点`int FirstNeighbor (Graph& G, int v)`
+            * 相对次邻接点`int NextNeighbor (Graph& G, int v, int w)`
+            * 插入点`void InsertVertex (Graph& G, VType vertex)`
+            * 插入边`void InsertEdge (Graph& G, int v1, int v2, WType weight)`
+            * 删点`void RemoveVertex (Graph& G, int v)`
+            * 删边`void RemoveEdge (Graph& G, int v1, int v2)`
     2. 图的存储结构
         1. 图的邻接矩阵表示
         2. 图的邻接表表示
@@ -522,8 +557,8 @@
     在线性链表上的顺序査找算法
     折半查找法
     折半査找法
-    次优査找树：折半査找的改进方法••
-    斐波那契査找：折半査找的变形■•…
+    次优査找树：折半査找的改进方法
+    斐波那契査找：折半査找的变形
     插值査找：折半査找的变形
     B树
     索引顺序表与分块査找
